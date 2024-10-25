@@ -4,7 +4,6 @@ const {getAllPersons,getPerson,createPerson,updatePerson,deletePerson}=require('
 const router=express.Router();
 
 module.exports = (app) => {
-    // Pass the app instance to each controller function
     router.get('/',getAllPersons(app));
     router.get('/:personId',getPerson(app));
     router.post('/',createPerson(app));
